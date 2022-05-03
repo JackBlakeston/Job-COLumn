@@ -21,7 +21,6 @@ function CitiesSelector () {
     <Select
       activeItem={location}
       items={CITIES}
-      leftIcon='locate'
       onItemSelect={onItemSelect}
     >
       <Button

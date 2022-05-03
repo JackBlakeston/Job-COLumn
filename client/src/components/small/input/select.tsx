@@ -1,17 +1,25 @@
 // Package imports
 import { Select } from '@blueprintjs/select';
+import React from 'react';
 
 // Local imports
 import { filterer, renderer } from '../../helpers/small';
 
-function GenericSelect ({
+type prop = {
+  children: React.ReactElement,
+  filterable: boolean,
+  items: any, //doesn't like it as a string[], i'm scared of using item[]
+  onItemSelect: any,
+  text: any, //doesn't like it as a string, i'm scared of using item
+}
+
+function GenericSelect({
   children,
   filterable,
-  icon,
   items,
   onItemSelect,
   text
-}) {
+}: prop): JSX.Element {
   return (
     <Select
       activeItem={text}
@@ -19,7 +27,6 @@ function GenericSelect ({
       itemPredicate={filterer}
       itemRenderer={renderer}
       items={items}
-      leftIcon={icon}
       onItemSelect={onItemSelect}
     >
       {children}
