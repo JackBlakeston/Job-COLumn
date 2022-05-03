@@ -1,3 +1,5 @@
+import React from 'react';
+
 export interface item {
   index: number,
   latitude: number,
@@ -15,6 +17,7 @@ export interface modifiers {
 
 
 // Workaround for children type of blueprint components
+// TODO install new blueprint version and delete this
 declare global {
   namespace JSX {
     interface IntrinsicAttributes extends React.Attributes {
