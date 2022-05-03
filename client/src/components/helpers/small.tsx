@@ -10,12 +10,12 @@ export function filterer (query: string, item: item) {
   }
 }
 
-type rendererOptionsProps = {
+type rendererOptions = {
   handleClick: ActionProps['onClick'],
   modifiers: modifiers
 }
 
-export function renderer (item: item, { handleClick, modifiers }: rendererOptionsProps): JSX.Element {
+export function renderer (item: item, { handleClick, modifiers }: rendererOptions): JSX.Element {
   if (!modifiers.matchesPredicate) return null;
   return (
     <MenuItem
