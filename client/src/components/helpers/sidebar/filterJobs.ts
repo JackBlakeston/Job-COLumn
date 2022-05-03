@@ -1,7 +1,7 @@
-import { job } from "../../../interfaces";
+import { filter, job } from "../../../interfaces";
 
-export function filterJobs (jobs: job, filters): job[] {
-  { keywords, cities, salary } = { filters }
+export function filterJobs (jobs: job[], filters: filter): job[] {
+  const { keywords, cities, salary } = filters;
 
   return jobs.filter(job => {
     let result = true;
