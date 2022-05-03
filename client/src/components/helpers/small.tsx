@@ -1,4 +1,4 @@
-import { MenuItem } from '@blueprintjs/core';
+import { ActionProps, MenuItem } from '@blueprintjs/core';
 import React, { Key, ReactNode } from 'react';
 import { item, modifiers } from './interfaces';
 
@@ -11,7 +11,7 @@ export function filterer (query: string, item: item) {
 }
 
 type rendererOptionsProps = {
-  handleClick: any, // TODO
+  handleClick: ActionProps['onClick'],
   modifiers: modifiers
 }
 
