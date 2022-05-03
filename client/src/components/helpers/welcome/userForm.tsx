@@ -1,9 +1,15 @@
-import { FormGroup } from '@blueprintjs/core';
+import { ActionProps, FormGroup, NumericInputProps } from '@blueprintjs/core';
 
 import Cities from '../../small/input/cities';
 import Numeric from '../../small/input/numeric';
 import Button from '../../small/buttons/primaryButton';
 import ToggleDarkMode from '../../small/buttons/toggleDarkMode';
+
+type userFormProps = {
+  defaultValue: any, // TODO is this a string?
+  onValueChange: NumericInputProps['onValueChange'],
+  buttonOnClick: ActionProps['onClick'],
+}
 
 export function userForm ({
   defaultValue,
