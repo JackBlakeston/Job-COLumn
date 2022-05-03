@@ -6,7 +6,7 @@ import Button from '../../small/buttons/primaryButton';
 import ToggleDarkMode from '../../small/buttons/toggleDarkMode';
 
 type userFormProps = {
-  defaultValue: any, // TODO is this a string?
+  defaultValue: number,
   onValueChange: NumericInputProps['onValueChange'],
   buttonOnClick: ActionProps['onClick'],
 }
