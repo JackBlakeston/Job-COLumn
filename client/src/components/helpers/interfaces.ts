@@ -1,5 +1,3 @@
-import { FormGroupProps } from '@blueprintjs/core';
-
 export interface item {
   index: number,
   latitude: number,
@@ -12,12 +10,6 @@ export interface modifiers {
   disabled: boolean
   matchesPredicate: boolean
 }
-
-// export interface filters {
-//   keywords, cities, salary
-// }
-
-
 
 
 
