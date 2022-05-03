@@ -15,7 +15,7 @@ export function userForm ({
   defaultValue,
   onValueChange,
   buttonOnClick
-}): JSX.Element {
+}: userFormProps): JSX.Element {
   return (
     <FormGroup inline >
       <Cities />
