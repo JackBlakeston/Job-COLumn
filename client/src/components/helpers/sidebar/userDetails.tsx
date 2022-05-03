@@ -1,13 +1,18 @@
-// Local imports
 import { numberFormatter } from '../index';
 
+type userDetailsProps = {
+  location: string;
+  salary: number;
+}
+
+// TODO make this a real component instead of this pinnochio bullshit
 export default function userDetails ({
   location,
   salary
-}) {
+}: userDetailsProps): React.ReactNode {
+
   return (
     <div>
-      {/* Location */}
       <div className='user-details'>
         <div>
           Current Location
@@ -16,7 +21,6 @@ export default function userDetails ({
           {location}
         </div>
       </div>
-      {/* Salary */}
       <div className='user-details'>
         <div>
           Current Salary
