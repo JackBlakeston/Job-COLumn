@@ -1,8 +1,8 @@
-export function filterJobs (jobs, {
-  keywords,
-  cities,
-  salary
-}) {
+import { job } from "../../../interfaces";
+
+export function filterJobs (jobs: job, filters): job[] {
+  { keywords, cities, salary } = { filters }
+
   return jobs.filter(job => {
     let result = true;
     if (keywords) {

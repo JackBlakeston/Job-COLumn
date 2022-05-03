@@ -1,7 +1,5 @@
-// Package imports
 import { FormGroup } from '@blueprintjs/core';
 
-// Local imports
 import Cities from '../../small/input/cities';
 import Numeric from '../../small/input/numeric';
 import Button from '../../small/buttons/primaryButton';
@@ -11,7 +9,7 @@ export function userForm ({
   defaultValue,
   onValueChange,
   buttonOnClick
-}) {
+}): JSX.Element {
   return (
     <FormGroup inline >
       <Cities />
