@@ -1,13 +1,21 @@
-function parseDate (date) {
+import { job } from "../../../interfaces";
+
+function parseDate(date: string): Date {
   return new Date(date.split('/').reverse().join('/'));
 }
 
-export function sortJobs (jobs, {
+type sortJobsOptions = {
+  category: string,
+  order: string,
+}
+
+export function sortJobs(jobs: job[], {
   category,
   order
-}) {
+}: sortJobsOptions): job[] {
+
   return jobs.sort((a, b) => {
-    let sortBy = '';
+    let sortBy: string = '';
     switch (category) {
       case 'Location':
         sortBy = 'locationName';
@@ -28,9 +36,10 @@ export function sortJobs (jobs, {
         sortBy = 'jobTitle';
     }
 
-    let direction;
+    let direction: number;
     if (sortBy === 'expirationDate' || sortBy === 'date') {
-      direction = parseDate(a[sortBy]) - parseDate(b[sortBy]);
+      // TODO check that this is still working
+      direction = parseDate(a[sortBy]).getTime() - parseDate(b[sortBy]).getTime();
     } else if (typeof a[sortBy] === 'string') {
       if (a[sortBy].toLowerCase() > b[sortBy].toLowerCase()) direction = 1;
       else direction = -1;
