@@ -27,7 +27,6 @@ function SortSelector (): JSX.Element {
       text={category}
       filterable={false}
       items={options}
-      icon='select'
       onItemSelect={onItemSelect}
     >
       <Button
