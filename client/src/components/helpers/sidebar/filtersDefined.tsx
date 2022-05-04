@@ -1,3 +1,4 @@
+import React from 'react';
 import { H5, Icon, InputGroup, NumericInputProps } from '@blueprintjs/core';
 
 import MultiCity from '../../small/input/multipleCities';

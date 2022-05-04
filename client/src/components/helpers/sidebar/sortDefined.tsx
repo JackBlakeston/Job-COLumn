@@ -1,3 +1,4 @@
+import React from 'react';
 import { ActionProps, H5, Icon } from '@blueprintjs/core';
 import { BlueprintIcons_16Id } from '@blueprintjs/icons/lib/esm/generated/16px/blueprint-icons-16';
 

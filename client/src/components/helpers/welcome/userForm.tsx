@@ -1,3 +1,4 @@
+import React from 'react';
 import { ActionProps, FormGroup, NumericInputProps } from '@blueprintjs/core';
 
 import Cities from '../../small/input/cities';
