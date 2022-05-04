@@ -1,3 +1,4 @@
+import React from 'react';
 // Package imports
 import { MultiSelect } from '@blueprintjs/select';
 // Local imports
