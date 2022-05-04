@@ -13,11 +13,11 @@ type props = {
 function MultipleCitiesSelector ({className}:props): JSX.Element {
   // Contexts
   const [filters, setFilters] = useFilterContext()
-  const { cities } = filters;
+  const { cities }: {cities :string[]} = filters;
 
   // Multi-select's onItemSelect
-  function onItemSelect (city) {
-    let newCities = [];
+  function onItemSelect (city : any) { //city should not be any
+    let newCities :string[] = [];
 
     if (cities.includes(city.name)) newCities = cities
       .filter(selectedCity => selectedCity !== city.name);
@@ -30,12 +30,12 @@ function MultipleCitiesSelector ({className}:props): JSX.Element {
   }
 
   // Multi-select's tagRenderer
-  function tagRenderer (city) {
+  function tagRenderer (city: string): JSX.Element{
     return <>{city}</>;
   }
 
   // Multi-select's onRemove
-  function onRemove (city) {
+  function onRemove (city: string): void {
     setFilters({
       ...filters,
       cities: cities.filter(selectedCity => selectedCity !== city)
