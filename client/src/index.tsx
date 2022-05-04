@@ -5,7 +5,7 @@ import App from './App';
 
 import './index.scss';
 
-const root: Root = createRoot(document.getElementById('root'));
+const root: Root = createRoot(document.getElementById('root') as HTMLElement);
 // Strict mode incompatible with BlueprintJS
 root.render(
   <App />
