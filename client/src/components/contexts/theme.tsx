@@ -1,11 +1,12 @@
 import React, { createContext,Dispatch, SetStateAction, useContext, useState } from 'react';
+import { Children } from './interfaces';
 
 
-const Context = createContext<[boolean, Dispatch<SetStateAction<boolean>>]>(null);
+const Context = createContext<[boolean, Dispatch<SetStateAction<boolean>>] | null>(null);
 
-export function ThemeProvider ({ children }): JSX.Element {
+export function ThemeProvider ({ children }: Children): JSX.Element {
   // States
-  const [darkMode, toggleDarkMode] = useState<boolean | null>(true);
+  const [darkMode, toggleDarkMode] = useState<boolean>(true);
 
   // Because BlueprintJS' dark mode toggle sucks
   const body: HTMLElement = document.body;
@@ -23,5 +24,7 @@ export function ThemeProvider ({ children }): JSX.Element {
 }
 
 export function useThemeContext (): [boolean, Dispatch<SetStateAction<boolean>>] {
-  return useContext(Context);
+  const ctx = useContext(Context);
+  if (ctx === null) throw new Error('Context must be called within provider');
+  return ctx;
 }

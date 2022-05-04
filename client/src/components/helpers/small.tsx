@@ -21,8 +21,12 @@ type rendererOptions = {
   modifiers: modifiers
 }
 
-// TODO
-export function renderer (item: any, { handleClick, modifiers }: rendererOptions): JSX.Element {
+// TODO add type to item or make two different functions
+export function renderer (
+  item: any,
+  { handleClick, modifiers }
+  : rendererOptions): JSX.Element | null {
+
   if (!modifiers.matchesPredicate) return null;
   return (
     <MenuItem

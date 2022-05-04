@@ -1,17 +1,21 @@
-// Package imports
+import React from 'react';
 import { useState } from 'react';
 import { Dialog, Icon } from '@blueprintjs/core';
 
-// Local imports
 import { useUserContext } from '../contexts/user';
 import { numberFormatter } from '../helpers';
 import CITIES from '../helpers/cities.json';
 import Details from './details';
 
-// Styles
 import './jobListing.scss';
+import { job } from '../../interfaces';
 
-function JobListing ({ job }) {
+type jobListingProps = {
+  job: job;
+}
+
+function JobListing ({ job }: jobListingProps): JSX.Element {
+
   const {
     jobTitle,
     minimumSalary,
@@ -22,18 +26,16 @@ function JobListing ({ job }) {
     locationName
   } = job
 
-  // Contexts and states
   const [user] = useUserContext();
   const [isOpen, setIsOpen] = useState(false);
 
-  // Salary math
-  const userIndex = CITIES
+  const userIndex: number = CITIES
     .find(city => city.name === user.location)
     .index;
-  const jobIndex = CITIES
+  const jobIndex: number = CITIES
     .find(city => city.name === locationName)
     .index;
-  const isBetter = (minimumSalary / user.salary) / (jobIndex / userIndex) > 1;
+  const isBetter: boolean = (minimumSalary / user.salary) / (jobIndex / userIndex) > 1;
 
   return (
     <div
@@ -48,19 +50,16 @@ function JobListing ({ job }) {
       >
         <Details job={job} />
       </Dialog>
-      {/* Title */}
       <div className='job-listing-row'>
         <div className='job-listing-title'>
           {jobTitle}
         </div>
       </div>
-      {/* Salary */}
       <div className='job-listing-row'>
         <div className='job-listing-salary'>
           £{numberFormatter(minimumSalary)} - £{numberFormatter(maximumSalary)}
         </div>
       </div>
-      {/* Dates */}
       <div className='job-listing-row job-listing-info'>
         <div>
           Posted on {date}
@@ -69,7 +68,6 @@ function JobListing ({ job }) {
           Expires on {expirationDate}
         </div>
       </div>
-      {/* Company and location */}
       <div className='job-listing-row job-listing-info'>
         <div>
           {employerName}
