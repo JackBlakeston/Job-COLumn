@@ -1,3 +1,4 @@
+import React from 'react';
 import { siteName } from './siteName';
 
 export const introduction: JSX.Element = (

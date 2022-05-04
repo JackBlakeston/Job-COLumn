@@ -1,3 +1,4 @@
+import React from 'react';
 import Logo from '../small/logo/logo';
 import Anchor from '../small/buttons/anchor';
 

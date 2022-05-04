@@ -1,4 +1,4 @@
-import { createContext,Dispatch, SetStateAction, useContext, useState } from 'react';
+import React, { createContext,Dispatch, SetStateAction, useContext, useState } from 'react';
 
 
 const Context = createContext<[boolean, Dispatch<SetStateAction<boolean>>]>(null);

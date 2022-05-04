@@ -1,3 +1,4 @@
+import React from 'react';
 // Package imports
 import { NumericInput } from '@blueprintjs/core';
 
