@@ -4,11 +4,12 @@ import { Dialog, Icon } from '@blueprintjs/core';
 
 import { useUserContext } from '../contexts/user';
 import { numberFormatter } from '../helpers';
-import CITIES from '../helpers/cities.json';
+import CITIES_UNTYPED from '../helpers/cities.json';
 import Details from './details';
+import { job } from '../../interfaces';
+import { city } from '../helpers/interfaces';
 
 import './jobListing.scss';
-import { job } from '../../interfaces';
 
 type jobListingProps = {
   job: job;
@@ -25,6 +26,8 @@ function JobListing ({ job }: jobListingProps): JSX.Element {
     employerName,
     locationName
   } = job
+
+  const CITIES: city[] = CITIES_UNTYPED;
 
   const [user] = useUserContext();
   const [isOpen, setIsOpen] = useState(false);
