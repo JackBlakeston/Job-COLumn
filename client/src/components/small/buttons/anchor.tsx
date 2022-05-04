@@ -1,4 +1,9 @@
-function Anchor ({ children, href }) {
+type AnchorProps = {
+  children: JSX.Element | string,
+  href: string,
+}
+
+function Anchor ({ children, href }: AnchorProps) {
   return (
     <a
       href={href}

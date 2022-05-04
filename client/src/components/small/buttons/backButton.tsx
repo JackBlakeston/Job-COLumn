@@ -1,11 +1,8 @@
-// Package imports
-import { useNavigate } from 'react-router-dom';
-
-// Local imports
+import { NavigateFunction, useNavigate } from 'react-router-dom';
 import Button from './secondaryButton';
 
-function BackButton () {
-  const navigate = useNavigate();
+function BackButton (): JSX.Element {
+  const navigate: NavigateFunction = useNavigate();
 
   return (
     <Button

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ActionProps, H5, Icon } from '@blueprintjs/core';
+import { H5, Icon } from '@blueprintjs/core';
 import { BlueprintIcons_16Id } from '@blueprintjs/icons/lib/esm/generated/16px/blueprint-icons-16';
 
 import Sorts from '../../small/input/sorts';
@@ -9,8 +9,8 @@ import css from '../../contexts/themes.scss';
 
 type sortDefinedProps = {
   sortOrder: string,
-  filterAndSort: ActionProps['onClick'];
-  sortOnClick: ActionProps['onClick'];
+  filterAndSort: () => void;
+  sortOnClick: () => void;
 }
 
 // ?? Does not work with a template literal, any less fucky way to do this??
