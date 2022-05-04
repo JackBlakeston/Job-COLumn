@@ -5,4 +5,4 @@ const { getAllJobs } = require('./controllers');
 const router = Router();
 router.get('/jobs', getAllJobs);
 
-module.exports = router;
+export default router;

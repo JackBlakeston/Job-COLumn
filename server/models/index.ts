@@ -12,6 +12,8 @@ const config = {
   logging: false
 };
 
+console.log(process.env.ENVIROMENT, 'DOTENV _>');
+
 let dbname = process.env.ENVIROMENT == 'testing' ? process.env.TEST_DB_NAME : process.env.DB_NAME;
 
 const connection = new Sequelize(
@@ -39,4 +41,4 @@ for (const model in db) {
 db.connection = connection;
 db.Sequelize = Sequelize;
 
-module.exports = db;
+export default db;
