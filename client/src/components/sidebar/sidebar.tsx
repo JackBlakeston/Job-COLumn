@@ -1,8 +1,6 @@
-// Package imports
 import { useEffect, useState } from 'react';
 import { Divider } from '@blueprintjs/core';
 
-// Local imports
 import { useFilterContext } from '../contexts/filter';
 import { useFilteredJobsContext } from '../contexts/filteredJobs';
 import { useJobsContext } from '../contexts/jobs';
@@ -24,52 +22,50 @@ import {
   userDetails
 } from '../helpers/sidebar';
 
-// Styling
 import css from '../contexts/themes.scss';
 import './sidebar.scss';
 
-const largeScreen = window.innerWidth >= css.mobile?.split('p')[0];
+// TODO Test if this is working (toggles display sidebar button)
+const largeScreen = window.innerWidth >= Number(css.mobile?.split('p')[0]);
 
-function Sidebar () {
-  // Contexts and states
+function Sidebar (): JSX.Element {
+
   const [darkMode] = useThemeContext();
   const [user] = useUserContext();
   const [filters, setFilters] = useFilterContext();
   const [sort, setSort] = useSortContext();
   const [jobs] = useJobsContext();
   const [, setFilteredJobs] = useFilteredJobsContext();
-  const [navbarVisible, setNavbarVisible] = useState(true);
 
-  // Filter setter functions
-  function keywordsOnChange (e) {
+  const [navbarVisible, setNavbarVisible] = useState<boolean>(true);
+
+  function keywordsOnChange (event: React.ChangeEvent<HTMLInputElement>): void {
     setFilters({
       ...filters,
-      keywords: e.target.value
+      keywords: event.target.value
     });
   }
 
-  function numericOnChange (value) {
+  function numericOnChange (value: number): void {
     setFilters({
       ...filters,
       salary: value
     });
   }
 
-  // Sort setter function
-  function sortOnClick () {
+  function sortOnClick (): void {
     setSort({
       ...sort,
       order: `${sort.order === 'asc' ? 'desc' : 'asc'}`
     })
   }
 
-  // Navbar visibility setter function
-  function toggleNavbar () {
+  function toggleNavbar (): void {
     setNavbarVisible(!navbarVisible)
   }
 
   // Fix navbar loses visibility bug
-  function bringBackSidebar () {
+  function bringBackSidebar (): void {
     if (largeScreen) setNavbarVisible(true);
   }
 
