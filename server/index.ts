@@ -4,8 +4,9 @@ import express from 'express'
 import cors from 'cors'
 import router from './router'
 import db from './models/index'
-const morgan = require('morgan');
-require('dotenv').config();
+import morgan from 'morgan'
+import dotend from 'dotenv'
+dotend.config();
 
 // Local imports
 type prop = {

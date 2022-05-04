@@ -2,11 +2,9 @@
 
 // Imports
 import {Job} from '../interfaces'
-const db = require('./index');
+import db from './index';
 
-async function getAllJobs () {
+export default async function getAllJobs () {
   let result : Job[] = await db.Jobs.findAll();
   return result
 }
-
-module.exports = { getAllJobs };
