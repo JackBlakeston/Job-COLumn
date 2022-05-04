@@ -1,17 +1,21 @@
-// Package imports
+import React from 'react';
 import { decode } from 'he';
 
-// Local imports
 import { useUserContext } from '../contexts/user';
 import { numberFormatter } from '../helpers';
 import Anchor from '../small/buttons/anchor';
 import Button from '../small/buttons/primaryButton';
 import Map from './map';
+import { job } from '../../interfaces';
 
-// Styles
 import './details.scss';
 
-function Details ({ job }) {
+type detailsProps = {
+  job: job;
+}
+
+function Details ({ job }: detailsProps) {
+
   const {
     date,
     employerName,
@@ -22,7 +26,7 @@ function Details ({ job }) {
     minimumSalary,
     maximumSalary
   } = job
-  // Contexts
+
   const [user] = useUserContext();
 
   return (

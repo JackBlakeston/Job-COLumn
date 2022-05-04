@@ -4,11 +4,12 @@ import { Dialog, Icon } from '@blueprintjs/core';
 
 import { useUserContext } from '../contexts/user';
 import { numberFormatter } from '../helpers';
-import CITIES from '../helpers/cities.json';
+import CITIES_UNTYPED from '../helpers/cities.json';
 import Details from './details';
+import { job } from '../../interfaces';
+import { city } from '../helpers/interfaces';
 
 import './jobListing.scss';
-import { job } from '../../interfaces';
 
 type jobListingProps = {
   job: job;
@@ -26,16 +27,14 @@ function JobListing ({ job }: jobListingProps): JSX.Element {
     locationName
   } = job
 
+  const CITIES: city[] = CITIES_UNTYPED;
+
   const [user] = useUserContext();
   const [isOpen, setIsOpen] = useState(false);
 
-  const userIndex: number = CITIES
-    .find(city => city.name === user.location)
-    .index;
-  const jobIndex: number = CITIES
-    .find(city => city.name === locationName)
-    .index;
-  const isBetter: boolean = (minimumSalary / user.salary) / (jobIndex / userIndex) > 1;
+  const userIndex: number | undefined = CITIES.find(city => city.name === user.location)?.index;
+  const jobIndex: number | undefined = CITIES.find(city => city.name === locationName)?.index;
+  const isBetter: boolean | undefined = (minimumSalary / user.salary) / (jobIndex! / userIndex!) > 1;
 
   return (
     <div
