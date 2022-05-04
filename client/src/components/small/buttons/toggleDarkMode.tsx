@@ -2,7 +2,11 @@
 import { useThemeContext } from '../../contexts/theme';
 import Button from './secondaryButton';
 
-function ToggleDarkMode ({ text }) {
+
+type props = {
+  text?: string
+}
+function ToggleDarkMode ({ text }: props) {
   // Contexts
   const [darkMode, toggleTheme] = useThemeContext();
 

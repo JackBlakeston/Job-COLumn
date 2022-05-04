@@ -11,6 +11,7 @@ type prop = {
   items: any, //doesn't like it as a string[], i'm scared of using item[]
   onItemSelect: any,
   text: any, //doesn't like it as a string, i'm scared of using item
+  className?: string
 }
 
 function GenericSelect({
