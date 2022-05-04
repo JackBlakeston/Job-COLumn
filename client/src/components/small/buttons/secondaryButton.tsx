@@ -1,6 +1,6 @@
 import React from 'react';
 // Package imports
-import { Classes, Button, MaybeElement } from '@blueprintjs/core';
+import { Classes, Button, MaybeElement, Intent } from '@blueprintjs/core';
 import { BlueprintIcons_16Id } from '@blueprintjs/icons/lib/esm/generated/16px/blueprint-icons-16';
 
 
@@ -27,7 +27,7 @@ function SecondaryButton ({
       fill={false}
       icon={icon}
       id={id}
-      intent='none'
+      intent={'secondary' as Intent}
       onClick={onClick}
       outlined
     >
