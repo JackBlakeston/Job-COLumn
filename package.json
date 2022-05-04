@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/OmarZubaidi/Job-COLumn/issues"
   },
-  "homepage": "https://github.com/OmarZubaidi/Job-COLumn#readme"
+  "homepage": "https://github.com/OmarZubaidi/Job-COLumn#readme",
+  "devDependencies": {
+    "@testing-library/react": "^13.1.1"
+  }
 }

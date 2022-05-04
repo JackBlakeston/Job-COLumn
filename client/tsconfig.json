@@ -1,0 +1,13 @@
+{
+  "include": [
+    "src/*",
+    "src",
+    "declarations.d.ts"
+  ],
+  "compilerOptions": {
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+  }
+}

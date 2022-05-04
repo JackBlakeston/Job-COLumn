@@ -27,7 +27,6 @@ function Details ({ job }) {
 
   return (
     <div className='details'>
-      {/* Salary and Apply button */}
       <div className='details-row'>
         <div className='job-salary'>
           £{numberFormatter(minimumSalary)} - £{numberFormatter(maximumSalary)}
@@ -42,7 +41,6 @@ function Details ({ job }) {
           </Anchor>
         </div>
       </div>
-      {/* Dates */}
       <div className='details-row'>
         <div>
           Posted on {date}
@@ -51,20 +49,17 @@ function Details ({ job }) {
           Expires on {expirationDate}
         </div>
       </div>
-      {/* Company name */}
       <div className='details-row'>
         <div>
           Employer: {employerName}
         </div>
       </div>
-      {/* Map */}
       <div className='details-row map'>
         <Map
           userLocation={user.location}
           jobLocation={locationName}
         />
       </div>
-      {/* Job description */}
       <div className='description'>
         {/* This gets rid of the '$#number;' in the job description */}
         {decode(jobDescription)}
