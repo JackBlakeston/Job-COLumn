@@ -1,24 +1,28 @@
 import React from 'react';
-// Package imports
+
 import { MultiSelect } from '@blueprintjs/select';
-// Local imports
+
 import { useFilterContext } from '../../contexts/filter';
 import { filterer, renderer } from '../../helpers/small';
-import CITIES from '../../helpers/cities.json'
-
+import CITIES_UNTYPED from '../../helpers/cities.json'
+import { city } from '../../helpers/interfaces';
 
 type props = {
   className?: string
 }
-function MultipleCitiesSelector ({className}:props): JSX.Element {
-  // Contexts
-  const [filters, setFilters] = useFilterContext()
-  const { cities }: {cities :string[]} = filters;
 
-  // Multi-select's onItemSelect
-  function onItemSelect (city : any) { //city should not be any
-    let newCities :string[] = [];
+function MultipleCitiesSelector ({className}: props): JSX.Element {
 
+  const MultiSelectNew = MultiSelect.ofType<any>();
+
+  const [filters, setFilters] = useFilterContext();
+  const { cities } = filters;
+
+  const CITIES: city[] = CITIES_UNTYPED;
+
+  function onItemSelect (city: any) { //TODO type
+    let newCities: string[] = [];
+    // todo console.log city and see props
     if (cities.includes(city.name)) newCities = cities
       .filter(selectedCity => selectedCity !== city.name);
     else newCities = cities.concat(city.name).sort();
@@ -30,7 +34,7 @@ function MultipleCitiesSelector ({className}:props): JSX.Element {
   }
 
   // Multi-select's tagRenderer
-  function tagRenderer (city: string): JSX.Element{
+  function tagRenderer (city: any): JSX.Element{
     return <>{city}</>;
   }
 
@@ -38,12 +42,12 @@ function MultipleCitiesSelector ({className}:props): JSX.Element {
   function onRemove (city: string): void {
     setFilters({
       ...filters,
-      cities: cities.filter(selectedCity => selectedCity !== city)
+      cities: cities.filter(currentCity => currentCity !== city)
     })
   }
 
   return (
-    <MultiSelect
+    <MultiSelectNew
       activeItem={cities}
       fill
       itemPredicate={filterer}

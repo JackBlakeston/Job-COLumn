@@ -5,7 +5,7 @@ export interface sort {
 
 export interface filter {
     keywords: string,
-      cities: any[],
+      cities: string[],
       salary: number
   }
 
