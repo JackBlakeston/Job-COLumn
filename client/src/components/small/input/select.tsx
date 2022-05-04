@@ -6,11 +6,12 @@ import React from 'react';
 import { filterer, renderer } from '../../helpers/small';
 
 type prop = {
+  activeItem?: string,
   children: React.ReactElement,
-  filterable: boolean,
+  filterable?: boolean,
   items: any, //doesn't like it as a string[], i'm scared of using item[]
   onItemSelect: any,
-  text: any, //doesn't like it as a string, i'm scared of using item
+  text?: any, //doesn't like it as a string, i'm scared of using item
   className?: string
 }
 

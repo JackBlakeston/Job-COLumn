@@ -1,16 +1,17 @@
-// Local imports
+import React from 'react';
+// Local importsv
 import { useUserContext } from '../../contexts/user';
 import CITIES from '../../helpers/cities.json';
 import Button from '../buttons/secondaryButton';
 import Select from './select';
 
-function CitiesSelector () {
+function CitiesSelector (): JSX.Element {
   // Contexts
   const [user, setUser] = useUserContext();
   const { location } = user;
 
   // Select's onItemSelect
-  function onItemSelect (city) {
+  function onItemSelect (city: any): void { //city should not be any
     setUser({
       ...user,
       location: city.name
