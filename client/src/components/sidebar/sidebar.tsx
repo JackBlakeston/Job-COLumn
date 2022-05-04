@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect, useState } from 'react';
 import { Divider } from '@blueprintjs/core';
 
@@ -83,7 +84,6 @@ function Sidebar (): JSX.Element {
 
   return (
     <nav className='background-color'>
-      {/* Header and visibility toggle */}
       <div>
         {headerAndLogo}
         <Divider />
@@ -97,9 +97,7 @@ function Sidebar (): JSX.Element {
       {navbarVisible && <>
         <ToggleDarkMode text={`${darkMode ? 'Light Mode' : 'Dark Mode'}`} />
         <Divider />
-        {/* User details */}
         {userDetails(user)}
-        {/* Filter options */}
         <Divider />
         {filtersDefined({
           keywords: filters.keywords,
@@ -107,7 +105,6 @@ function Sidebar (): JSX.Element {
           numericOnChange
         })}
         <Divider />
-        {/* Sort options */}
         {sortDefined({
           filterAndSort,
           sortOrder: sort.order,
