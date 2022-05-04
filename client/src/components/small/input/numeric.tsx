@@ -8,7 +8,8 @@ type props = {
   defaultValue: any,
   fill: boolean,
   onValueChange: any,
-  placeholder: string
+  placeholder?: string,
+  className?: string
 }
 
 function Numeric ({

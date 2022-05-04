@@ -1,14 +1,13 @@
 // Package imports
 import { MultiSelect } from '@blueprintjs/select';
-
 // Local imports
 import { useFilterContext } from '../../contexts/filter';
 import { filterer, renderer } from '../../helpers/small';
 import CITIES from '../../helpers/cities.json'
 
-function MultipleCitiesSelector () {
+function MultipleCitiesSelector (): JSX.Element {
   // Contexts
-  const [filters, setFilters] = useFilterContext();
+  const [filters, setFilters] = useFilterContext()
   const { cities } = filters;
 
   // Multi-select's onItemSelect
