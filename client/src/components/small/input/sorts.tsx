@@ -34,9 +34,7 @@ function SortSelector (): JSX.Element {
       <Button
         text={category}
         icon='select'
-        ariaLabel={undefined}
-        id={undefined}
-        onClick={undefined}
+
       />
     </Select>
   )
