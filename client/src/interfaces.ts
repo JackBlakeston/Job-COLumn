@@ -15,6 +15,7 @@ export interface filter {
   }
 
   export interface job {
+      id?: number
       employerName: string,
       locationName: string,
       minimumSalary: number,

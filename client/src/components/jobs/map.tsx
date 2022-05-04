@@ -1,10 +1,14 @@
-// Styling
+import React from 'react';
 import './map.scss';
 
-// Environment variables
 const { REACT_APP_GOOGLE_MAPS_API_KEY } = process.env;
 
-function Map ({ userLocation, jobLocation }) {
+type mapProps = {
+  userLocation: string;
+  jobLocation: string;
+}
+
+function Map ({ userLocation, jobLocation }: mapProps): JSX.Element {
   return (
     <iframe
       id='map'

@@ -1,30 +1,29 @@
-// Package imports
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Spinner } from '@blueprintjs/core';
 
-// Local imports
 import { useFilteredJobsContext } from '../contexts/filteredJobs';
 import { useJobsContext } from '../contexts/jobs';
 import { getAllJobs } from '../../services/api';
 import Sidebar from '../sidebar/sidebar';
 import JobListing from './jobListing';
+import { job } from '../../interfaces';
 
-// Styling
 import './jobs.scss';
 
-function Jobs () {
-  // Contexts
+function Jobs (): JSX.Element {
+
   const [, setJobs] = useJobsContext();
   const [filteredJobs, setFilteredJobs] = useFilteredJobsContext();
   const [isLoading, setIsLoading] = useState(true);
-  // Get all jobs once
+
   useEffect(() => {
     getAllJobs()
-      .then(result => {
+      .then((result: job[]) => {
         setIsLoading(false);
         setJobs(result.slice(0, 200));
         setFilteredJobs(result.slice(0, 200));
       });
+      // TODO test this with correct dependency array
       // eslint-disable-next-line
   }, []);
 
