@@ -1,13 +1,19 @@
 import { ActionProps, MenuItem } from '@blueprintjs/core';
 import React, { Key, ReactNode } from 'react';
-import { item, modifiers } from './interfaces';
 
-export function filterer (query: string, item: item) {
-  if (item?.name) {
-    return item.name
-      .toLowerCase()
-      .indexOf(query.toLowerCase()) >= 0;
-  }
+export function filterer (query: string, item: any): boolean {
+  let itemName: string;
+  if (item?.name) itemName = item.name;
+  else itemName = item;
+  return itemName
+    .toLowerCase()
+    .indexOf(query.toLowerCase()) >= 0;
+}
+
+type modifiers = {
+  active: boolean
+  disabled: boolean
+  matchesPredicate: boolean
 }
 
 type rendererOptions = {
@@ -15,7 +21,8 @@ type rendererOptions = {
   modifiers: modifiers
 }
 
-export function renderer (item: item, { handleClick, modifiers }: rendererOptions): JSX.Element {
+// TODO
+export function renderer (item: any, { handleClick, modifiers }: rendererOptions): JSX.Element {
   if (!modifiers.matchesPredicate) return null;
   return (
     <MenuItem
