@@ -6,7 +6,11 @@ import { useFilterContext } from '../../contexts/filter';
 import { filterer, renderer } from '../../helpers/small';
 import CITIES from '../../helpers/cities.json'
 
-function MultipleCitiesSelector (): JSX.Element {
+
+type props = {
+  className?: string
+}
+function MultipleCitiesSelector ({className}:props): JSX.Element {
   // Contexts
   const [filters, setFilters] = useFilterContext()
   const { cities } = filters;

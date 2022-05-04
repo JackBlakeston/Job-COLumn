@@ -6,7 +6,7 @@ import { NumericInput } from '@blueprintjs/core';
 import GBP from '../GBP/GBP';
 
 type props = {
-  defaultValue: any,
+  defaultValue?: any,
   fill: boolean,
   onValueChange: any,
   placeholder?: string,
