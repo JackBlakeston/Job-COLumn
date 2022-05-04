@@ -1,3 +1,4 @@
+import React from 'react';
 // Local imports
 import { ReactComponent as Icon } from './GBP.svg';
 
