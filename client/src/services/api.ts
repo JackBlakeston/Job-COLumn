@@ -1,14 +1,13 @@
-// Package imports
 import axios from 'axios';
+import { job } from '../interfaces';
 
-// Local imports
-const rootUrl = 'http://127.0.0.1:3001'
+const rootUrl: string = 'http://127.0.0.1:3001'
 
-export async function getAllJobs () {
+export async function getAllJobs (): Promise<job[] | undefined> {
   try {
     const jobs = await axios.get(`${rootUrl}/jobs`);
     return jobs.data;
-  } catch (error) {
+  } catch (error: any) {
     console.error('Error getting all jobs:', error.message);
   }
 }

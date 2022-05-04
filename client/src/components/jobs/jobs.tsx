@@ -18,10 +18,12 @@ function Jobs (): JSX.Element {
 
   useEffect(() => {
     getAllJobs()
-      .then((result: job[]) => {
-        setIsLoading(false);
-        setJobs(result.slice(0, 200));
-        setFilteredJobs(result.slice(0, 200));
+      .then((result: job[] | undefined) => {
+        if (result) {
+          setIsLoading(false);
+          setJobs(result.slice(0, 200));
+          setFilteredJobs(result.slice(0, 200));
+        }
       });
       // TODO test this with correct dependency array
       // eslint-disable-next-line
