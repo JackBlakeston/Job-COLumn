@@ -16,7 +16,7 @@ type sortDefinedProps = {
 // ?? Does not work with a template literal, any less fucky way to do this??
 function getIconName (sortOrder: string): BlueprintIcons_16Id {
   if (sortOrder === 'asc') return 'sort-asc';
-  if (sortOrder === 'desc') return 'sort-desc';
+  else return 'sort-desc';
 }
 
 export default function sortDefined ({
