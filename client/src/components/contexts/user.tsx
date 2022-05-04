@@ -1,12 +1,13 @@
 import React, { createContext,Dispatch, SetStateAction, useContext, useState } from 'react';
 import {user} from '../../interfaces'
+import { Children } from './interfaces';
 
 
-export const UserContext = createContext<[user, Dispatch<SetStateAction<user>>]>(null);
+export const UserContext = createContext<[user, Dispatch<SetStateAction<user>>] | null>(null);
 
-export function UserProvider ({ children }): JSX.Element {
+export function UserProvider ({ children }: Children): JSX.Element {
 
-  const [user, setUser] = useState<user | null>({
+  const [user, setUser] = useState<user>({
     location: 'London',
     salary: 20_000
   });
@@ -19,5 +20,7 @@ export function UserProvider ({ children }): JSX.Element {
 }
 
 export function useUserContext (): [user, Dispatch<SetStateAction<user>>] {
-  return useContext(UserContext);
+  const ctx = useContext(UserContext);
+  if (ctx === null) throw new Error('Context must be called within provider');
+  return ctx;
 }

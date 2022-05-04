@@ -1,12 +1,13 @@
 import React, { createContext, Dispatch, SetStateAction, useContext, useState } from 'react';
 
 import {sort} from '../../interfaces'
+import { Children } from './interfaces';
 
-const Context = createContext<[sort, Dispatch<SetStateAction<sort>>]>(null);
+const Context = createContext<[sort, Dispatch<SetStateAction<sort>>] | null>(null);
 
-export function SortProvider ({ children }): JSX.Element {
+export function SortProvider ({ children }: Children): JSX.Element {
 
-  const [sort, setSort] = useState<sort | null>({
+  const [sort, setSort] = useState<sort>({
     category: 'Job Title',
     order: 'asc'
   });
@@ -19,5 +20,7 @@ export function SortProvider ({ children }): JSX.Element {
 }
 
 export function useSortContext (): [sort, Dispatch<SetStateAction<sort>>] {
-  return useContext(Context);
+  const ctx = useContext(Context);
+  if (ctx === null) throw new Error('Context must be called within provider');
+  return ctx;
 }
