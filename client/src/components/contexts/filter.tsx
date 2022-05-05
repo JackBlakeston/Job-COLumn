@@ -1,12 +1,10 @@
-// Package imports
 import React, { createContext, Dispatch, SetStateAction, useContext, useState } from 'react';
-import { filter } from '../../interfaces'
-import { Children } from './interfaces';
+import { filter, Children } from '../../interfaces'
 
 const Context = createContext<[filter, Dispatch<SetStateAction<filter>>] | null>(null);
 
 export function FilterProvider ({ children }: Children) : JSX.Element {
-  // States
+
   const [filters, setFilters] = useState<filter>({
     keywords: '',
     cities: [],

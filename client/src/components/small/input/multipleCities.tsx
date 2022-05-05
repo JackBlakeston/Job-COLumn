@@ -5,7 +5,7 @@ import { MultiSelect } from '@blueprintjs/select';
 import { useFilterContext } from '../../contexts/filter';
 import { filterer, renderer } from '../../helpers/small';
 import CITIES_UNTYPED from '../../helpers/cities.json'
-import { city } from '../../helpers/interfaces';
+import { city } from '../../../interfaces';
 
 type props = {
   className?: string

@@ -1,7 +1,6 @@
 import React, { createContext, Dispatch, SetStateAction, useContext, useState } from 'react';
 
-import {sort} from '../../interfaces'
-import { Children } from './interfaces';
+import {sort, Children} from '../../interfaces'
 
 const Context = createContext<[sort, Dispatch<SetStateAction<sort>>] | null>(null);
 

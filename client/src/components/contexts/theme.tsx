@@ -1,11 +1,10 @@
 import React, { createContext,Dispatch, SetStateAction, useContext, useState } from 'react';
-import { Children } from './interfaces';
-
+import { Children } from '../../interfaces';
 
 const Context = createContext<[boolean, Dispatch<SetStateAction<boolean>>] | null>(null);
 
 export function ThemeProvider ({ children }: Children): JSX.Element {
-  // States
+
   const [darkMode, toggleDarkMode] = useState<boolean>(true);
 
   // Because BlueprintJS' dark mode toggle sucks

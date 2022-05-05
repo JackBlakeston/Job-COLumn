@@ -27,8 +27,6 @@ describe('Sort defined component', () => {
     expect(screen.getByRole('button', { name: /lesgo/i })).toBeInTheDocument();
   });
 
-  // TODO also check that icon changes
-  // ?? Doesn't seem to be possible with blueprint
   test('Should call function on sort order button click', async () => {
     customRender();
     const orderButton = screen.getByRole('button', { name: /sort-button/i });

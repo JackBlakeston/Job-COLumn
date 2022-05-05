@@ -40,7 +40,6 @@ export function sortJobs(jobs: job[], {
     const aVal = a[sortBy as keyof job];
     const bVal = b[sortBy as keyof job];
     if (sortBy === 'expirationDate' || sortBy === 'date') {
-      // TODO check that this is still working with dates
       direction = parseDate(a[sortBy]).getTime() - parseDate(b[sortBy]).getTime();
     } else if (sortBy !== 'minimumSalary') {
       if ((aVal as string).toLowerCase() > (bVal as string).toLowerCase()) direction = 1;

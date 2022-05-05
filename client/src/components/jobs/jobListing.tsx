@@ -6,8 +6,7 @@ import { useUserContext } from '../contexts/user';
 import { numberFormatter } from '../helpers';
 import CITIES_UNTYPED from '../helpers/cities.json';
 import Details from './details';
-import { job } from '../../interfaces';
-import { city } from '../helpers/interfaces';
+import { city, job } from '../../interfaces';
 
 import './jobListing.scss';
 
