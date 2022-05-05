@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { useSortContext } from '../../contexts/sort';
-import Button from '../buttons/secondaryButton';
+import Button from '../../buttons/secondaryButton';
 import Select from './select';
 
 function SortSelector (): JSX.Element {

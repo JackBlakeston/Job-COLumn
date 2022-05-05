@@ -3,8 +3,8 @@ import { FormGroup } from '@blueprintjs/core';
 
 import Cities from '../../small/input/cities';
 import Numeric from '../../small/input/numeric';
-import Button from '../../small/buttons/primaryButton';
-import ToggleDarkMode from '../../small/buttons/toggleDarkMode';
+import Button from '../../buttons/primaryButton';
+import ToggleDarkMode from '../../buttons/toggleDarkMode';
 
 type userFormProps = {
   defaultValue: number,

@@ -12,9 +12,9 @@ import {
   footer,
   headerAndLogo
 } from '../helpers';
-import Back from '../small/buttons/backButton';
-import SecondaryButton from '../small/buttons/secondaryButton';
-import ToggleDarkMode from '../small/buttons/toggleDarkMode';
+import Back from '../buttons/backButton';
+import SecondaryButton from '../buttons/secondaryButton';
+import ToggleDarkMode from '../buttons/toggleDarkMode';
 import {
   filterJobs,
   filtersDefined,

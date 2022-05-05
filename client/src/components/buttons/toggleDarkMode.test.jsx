@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-import { ThemeProvider } from '../../contexts/theme';
+import { ThemeProvider } from '../contexts/theme';
 import ToggleDarkMode from './toggleDarkMode';
 
 const customRender = () => {

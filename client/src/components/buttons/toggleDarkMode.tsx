@@ -1,6 +1,6 @@
 import React from 'react';
 // Local imports
-import { useThemeContext } from '../../contexts/theme';
+import { useThemeContext } from '../contexts/theme';
 import Button from './secondaryButton';
 
 

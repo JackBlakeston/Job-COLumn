@@ -2,7 +2,7 @@ import React from 'react';
 // Local importsv
 import { useUserContext } from '../../contexts/user';
 import CITIES from '../../helpers/cities.json';
-import Button from '../buttons/secondaryButton';
+import Button from '../../buttons/secondaryButton';
 import Select from './select';
 
 function CitiesSelector (): JSX.Element {

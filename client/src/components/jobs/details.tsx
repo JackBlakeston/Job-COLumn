@@ -3,8 +3,8 @@ import { decode } from 'he';
 
 import { useUserContext } from '../contexts/user';
 import { numberFormatter } from '../helpers';
-import Anchor from '../small/buttons/anchor';
-import Button from '../small/buttons/primaryButton';
+import Anchor from '../buttons/anchor';
+import Button from '../buttons/primaryButton';
 import Map from './map';
 import { job } from '../../interfaces';
 
