@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-import { SortProvider } from '../../contexts/sort';
+import { SortProvider } from '../../../contexts/sort';
 import sortDefined from './sortDefined';
 
 const filterAndSort = jest.fn();

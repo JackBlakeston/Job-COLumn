@@ -11,7 +11,7 @@ import { useUserContext } from '../../contexts/user';
 import {
   footer,
   headerAndLogo
-} from '../../helpers';
+} from '../../utils';
 import Back from '../../buttons/backButton';
 import SecondaryButton from '../../buttons/secondaryButton';
 import ToggleDarkMode from '../../buttons/toggleDarkMode';
@@ -21,7 +21,7 @@ import {
   sortJobs,
   sortDefined,
   userDetails
-} from '../../helpers/sidebar';
+} from './utils';
 
 import css from '../../contexts/themes.scss';
 import './sidebar.scss';

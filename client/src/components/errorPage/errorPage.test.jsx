@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import Error from './error';
+import ErrorPage from './errorPage';
 import { MemoryRouter } from 'react-router-dom';
 
 const RouterWrapper = ({ children }) => (
@@ -11,12 +11,12 @@ const RouterWrapper = ({ children }) => (
 describe('Error component', () => {
 
   test('should render text with correct text in the DOM', () => {
-    render(<Error />, { wrapper: RouterWrapper });
+    render(<ErrorPage />, { wrapper: RouterWrapper });
     expect(screen.getByText('Error 404: Page not found')).toBeInTheDocument();
   });
 
   test('should render a <Back> component', () => {
-    render(<Error />, { wrapper: RouterWrapper });
+    render(<ErrorPage />, { wrapper: RouterWrapper });
     expect(screen.getByRole('button', {name: /Back/i})).toBeInTheDocument();
   });
 });

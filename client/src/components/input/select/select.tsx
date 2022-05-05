@@ -1,7 +1,7 @@
 import { Select } from '@blueprintjs/select';
 import React from 'react';
 
-import { filterer, renderer } from '../../helpers/small';
+import { filterer, renderer } from '../utils';
 
 type prop = {
   activeItem?: string,

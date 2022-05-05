@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-import { FilterProvider } from '../../contexts/filter';
+import { FilterProvider } from '../../../contexts/filter';
 import filtersDefined from './filtersDefined';
 
 const keywordsOnChange = jest.fn();

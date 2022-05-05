@@ -1,4 +1,4 @@
-import { job } from "../../../interfaces";
+import { job } from "../../../../interfaces";
 
 function parseDate(date: string): Date {
   return new Date(date.split('/').reverse().join('/'));

@@ -1,5 +1,5 @@
 import React from 'react';
-import { numberFormatter } from '../index';
+import { numberFormatter } from '../../../utils';
 
 type userDetailsProps = {
   location: string;

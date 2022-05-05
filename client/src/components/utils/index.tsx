@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../small/logo/logo';
+import Logo from './logo/logo';
 import Anchor from '../buttons/anchor';
 
 // Add thousands divider

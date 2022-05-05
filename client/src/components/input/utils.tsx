@@ -1,6 +1,8 @@
 import { ActionProps, MenuItem } from '@blueprintjs/core';
 import React, { Key, ReactNode } from 'react';
 
+// TODO split each function into two and put each pair in
+// TODO corresponding folder (select and multipleCities)
 export function filterer (query: string, item: any): boolean {
   let itemName: string;
   if (item?.name) itemName = item.name;
@@ -21,7 +23,6 @@ type rendererOptions = {
   modifiers: modifiers
 }
 
-// TODO add type to item or make two different functions
 export function renderer (
   item: any,
   { handleClick, modifiers }

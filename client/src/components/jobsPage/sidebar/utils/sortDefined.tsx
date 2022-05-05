@@ -2,10 +2,10 @@ import React from 'react';
 import { H5, Icon } from '@blueprintjs/core';
 import { BlueprintIcons_16Id } from '@blueprintjs/icons/lib/esm/generated/16px/blueprint-icons-16';
 
-import Sorts from '../../input/sortSelector/sortSelector';
-import PrimaryButton from '../../buttons/primaryButton';
-import SecondaryButton from '../../buttons/secondaryButton';
-import css from '../../contexts/themes.scss';
+import Sorts from '../../../input/sortSelector/sortSelector';
+import PrimaryButton from '../../../buttons/primaryButton';
+import SecondaryButton from '../../../buttons/secondaryButton';
+import css from '../../../contexts/themes.scss';
 
 type sortDefinedProps = {
   sortOrder: string,

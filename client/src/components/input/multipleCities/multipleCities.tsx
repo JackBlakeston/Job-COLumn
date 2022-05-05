@@ -3,7 +3,7 @@ import React from 'react';
 import { MultiSelect } from '@blueprintjs/select';
 
 import { useFilterContext } from '../../contexts/filter';
-import { filterer, renderer } from '../../helpers/small';
+import { filterer, renderer } from '../utils';
 import CITIES_UNTYPED from '../../../assets/cities.json'
 import { city } from '../../../interfaces';
 

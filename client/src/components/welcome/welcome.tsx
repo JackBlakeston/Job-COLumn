@@ -5,14 +5,14 @@ import { useUserContext } from '../contexts/user';
 import {
   footer,
   headerAndLogo,
-} from '../helpers/index';
+} from '../utils';
 import {
   userForm,
   welcomeMessage,
   introduction,
   functionality,
   privacyDisclosure
-} from '../helpers/welcome';
+} from './utils';
 
 import './welcome.scss';
 

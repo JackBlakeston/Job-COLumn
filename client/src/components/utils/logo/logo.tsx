@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReactComponent as Icon } from './logo.svg';
+import { ReactComponent as Icon } from '../../../assets/logo.svg';
 
 function Logo () {
   return (

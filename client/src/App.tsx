@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { FocusStyleManager } from '@blueprintjs/core';
 
 import JobsPage from './components/jobsPage/jobsPage';
-import Error from './components/small/error/error';
+import ErrorPage from './components/errorPage/errorPage';
 import Welcome from './components/welcome/welcome';
 import { ThemeProvider } from './components/contexts/theme';
 import { UserProvider } from './components/contexts/user';
@@ -35,7 +35,7 @@ function App () {
                   <Routes>
                     <Route path='/' element={<Welcome />} />
                     <Route path='/jobs' element={<JobsPage />} />
-                    <Route path='/*' element={<Error />} />
+                    <Route path='/*' element={<ErrorPage />} />
                   </Routes>
                 </Router>
               </SortProvider>

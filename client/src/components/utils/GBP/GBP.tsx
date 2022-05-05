@@ -1,6 +1,6 @@
 import React from 'react';
-// Local imports
-import { ReactComponent as Icon } from './GBP.svg';
+
+import { ReactComponent as Icon } from '../../../assets/GBP.svg';
 
 function GBP () {
   return (

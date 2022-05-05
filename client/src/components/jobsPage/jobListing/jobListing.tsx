@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Dialog, Icon } from '@blueprintjs/core';
 
 import { useUserContext } from '../../contexts/user';
-import { numberFormatter } from '../../helpers';
+import { numberFormatter } from '../../utils';
 import CITIES_UNTYPED from '../../../assets/cities.json';
 import JobDetails from './jobDetails/jobDetails';
 import { city, job } from '../../../interfaces';

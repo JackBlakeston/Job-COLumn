@@ -1,4 +1,4 @@
-import { filter, job } from "../../../interfaces";
+import { filter, job } from "../../../../interfaces";
 
 export function filterJobs (jobs: job[], filters: filter): job[] {
   const { keywords, cityNames, salary } = filters;
