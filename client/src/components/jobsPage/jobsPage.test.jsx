@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react"
 import { JobsProvider } from "../contexts/jobs";
 import { FilteredJobsProvider } from "../contexts/filteredJobs";
-import Jobs from "./jobs";
+import JobsPage from "./jobsPage";
 import { ThemeProvider } from "../contexts/theme";
 import { UserProvider } from "../contexts/user";
 import { FilterProvider } from "../contexts/filter";
@@ -30,7 +30,7 @@ const MockWrapper = ({ children }) => (
 
 describe('Jobs component', () => {
   test('should render all children correctly', async () => {
-    render(<Jobs />, { wrapper: MockWrapper });
+    render(<JobsPage />, { wrapper: MockWrapper });
     const powered = screen.getByText(/Powered by /)
     expect(powered).toBeInTheDocument();
     const filter = screen.getByText(/keywords/i)

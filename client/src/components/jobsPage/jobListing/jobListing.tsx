@@ -2,10 +2,10 @@ import React from 'react';
 import { useState } from 'react';
 import { Dialog, Icon } from '@blueprintjs/core';
 
-import { useUserContext } from '../contexts/user';
-import { numberFormatter } from '../helpers';
-import CITIES_UNTYPED from '../../assets/cities.json';
-import Details from './details';
+import { useUserContext } from '../../contexts/user';
+import { numberFormatter } from '../../helpers';
+import CITIES_UNTYPED from '../../../assets/cities.json';
+import Details from './details/details';
 import { city, job } from '../../interfaces';
 
 import './jobListing.scss';

@@ -4,13 +4,13 @@ import { Spinner } from '@blueprintjs/core';
 import { useFilteredJobsContext } from '../contexts/filteredJobs';
 import { useJobsContext } from '../contexts/jobs';
 import { getAllJobs } from '../../services/api';
-import Sidebar from '../sidebar/sidebar';
-import JobListing from './jobListing';
+import Sidebar from './sidebar/sidebar';
+import JobListing from './jobListing/jobListing';
 import { job } from '../../interfaces';
 
 import './jobs.scss';
 
-function Jobs (): JSX.Element {
+function JobsPage (): JSX.Element {
 
   const [, setJobs] = useJobsContext();
   const [filteredJobs, setFilteredJobs] = useFilteredJobsContext();
@@ -39,4 +39,4 @@ function Jobs (): JSX.Element {
   );
 }
 
-export default Jobs;
+export default JobsPage;

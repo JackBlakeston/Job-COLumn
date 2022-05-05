@@ -14,7 +14,7 @@ type detailsProps = {
   job: job;
 }
 
-function Details ({ job }: detailsProps) {
+function jobDetails ({ job }: detailsProps) {
 
   const {
     date,
@@ -73,4 +73,4 @@ function Details ({ job }: detailsProps) {
   );
 }
 
-export default Details;
+export default jobDetails;

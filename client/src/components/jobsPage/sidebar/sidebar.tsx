@@ -2,26 +2,26 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import { Divider } from '@blueprintjs/core';
 
-import { useFilterContext } from '../contexts/filter';
-import { useFilteredJobsContext } from '../contexts/filteredJobs';
-import { useJobsContext } from '../contexts/jobs';
-import { useSortContext } from '../contexts/sort';
-import { useThemeContext } from '../contexts/theme';
-import { useUserContext } from '../contexts/user';
+import { useFilterContext } from '../../contexts/filter';
+import { useFilteredJobsContext } from '../../contexts/filteredJobs';
+import { useJobsContext } from '../../contexts/jobs';
+import { useSortContext } from '../../contexts/sort';
+import { useThemeContext } from '../../contexts/theme';
+import { useUserContext } from '../../contexts/user';
 import {
   footer,
   headerAndLogo
-} from '../helpers';
-import Back from '../buttons/backButton';
-import SecondaryButton from '../buttons/secondaryButton';
-import ToggleDarkMode from '../buttons/toggleDarkMode';
+} from '../../helpers';
+import Back from '../../buttons/backButton';
+import SecondaryButton from '../../buttons/secondaryButton';
+import ToggleDarkMode from '../../buttons/toggleDarkMode';
 import {
   filterJobs,
   filtersDefined,
   sortJobs,
   sortDefined,
   userDetails
-} from '../helpers/sidebar';
+} from '../../helpers/sidebar';
 
 import css from '../contexts/themes.scss';
 import './sidebar.scss';

@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react"
 import { UserProvider } from "../contexts/user";
-import Details from "./details";
+import jobDetails from "./details";
 
 const job =  {
     employerName: "Cathcart Associates",
@@ -15,7 +15,7 @@ const job =  {
 
 describe('details compenent', ()=>{
   test('should render all children correctly', () => {
-    render(<Details job={job}/>, {wrapper: UserProvider});
+    render(<jobDetails job={job}/>, {wrapper: UserProvider});
     const map = screen.getByTitle('map')
     expect(map).toBeInTheDocument();
     const money = screen.getByText(/48,000/)
