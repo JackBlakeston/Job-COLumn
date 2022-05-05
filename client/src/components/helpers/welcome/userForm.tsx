@@ -1,8 +1,8 @@
 import React from 'react';
 import { FormGroup } from '@blueprintjs/core';
 
-import Cities from '../../small/input/cities';
-import Numeric from '../../small/input/numeric';
+import Cities from '../../input/cities/cities';
+import Numeric from '../../input/numeric/numeric';
 import Button from '../../buttons/primaryButton';
 import ToggleDarkMode from '../../buttons/toggleDarkMode';
 

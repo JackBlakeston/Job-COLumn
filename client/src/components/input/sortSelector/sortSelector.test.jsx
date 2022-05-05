@@ -1,7 +1,7 @@
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from "@testing-library/user-event";
 import { SortProvider } from '../../contexts/sort';
-import SortSelector from './sorts';
+import SortSelector from './sortSelector';
 
 const MockWrapper = ({ children }) => (
   <SortProvider>

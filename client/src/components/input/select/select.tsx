@@ -1,8 +1,6 @@
-// Package imports
 import { Select } from '@blueprintjs/select';
 import React from 'react';
 
-// Local imports
 import { filterer, renderer } from '../../helpers/small';
 
 type prop = {

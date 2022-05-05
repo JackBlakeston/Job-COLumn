@@ -3,7 +3,7 @@ import React from 'react';
 import { useUserContext } from '../../contexts/user';
 import CITIES from '../../helpers/cities.json';
 import Button from '../../buttons/secondaryButton';
-import Select from './select';
+import Select from '../select/select';
 
 function CitiesSelector (): JSX.Element {
   // Contexts

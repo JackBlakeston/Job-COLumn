@@ -1,8 +1,8 @@
 import React from 'react';
 import { H5, Icon, InputGroup, NumericInputProps } from '@blueprintjs/core';
 
-import MultiCity from '../../small/input/multipleCities';
-import Numeric from '../../small/input/numeric';
+import MultiCity from '../../input/multipleCities/multipleCities';
+import Numeric from '../../input/numeric/numeric';
 
 type filtersDefinedProps = {
   keywords: string,

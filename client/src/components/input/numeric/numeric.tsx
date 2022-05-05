@@ -3,7 +3,7 @@ import React from 'react';
 import { NumericInput } from '@blueprintjs/core';
 
 // Local imports
-import GBP from '../GBP/GBP';
+import GBP from './GBP/GBP';
 
 type props = {
   defaultValue?: any,
