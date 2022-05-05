@@ -1,11 +1,11 @@
 import { render, screen } from "@testing-library/react"
-import { JobsProvider } from "../contexts/jobs";
-import { FilteredJobsProvider } from "../contexts/filteredJobs";
+import { JobsProvider } from "../../contexts/jobs";
+import { FilteredJobsProvider } from "../../contexts/filteredJobs";
 import JobsPage from "./jobsPage";
-import { ThemeProvider } from "../contexts/theme";
-import { UserProvider } from "../contexts/user";
-import { FilterProvider } from "../contexts/filter";
-import { SortProvider } from "../contexts/sort";
+import { ThemeProvider } from "../../contexts/theme";
+import { UserProvider } from "../../contexts/user";
+import { FilterProvider } from "../../contexts/filter";
+import { SortProvider } from "../../contexts/sort";
 import { MemoryRouter } from "react-router-dom";
 
 

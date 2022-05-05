@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { useUserContext } from '../../contexts/user';
+import { useUserContext } from '../../../contexts/user';
 import CITIES_UNTYPED from '../../../assets/cities.json';
 import Button from '../../buttons/secondaryButton';
 import Select from '../select/select';

@@ -1,6 +1,6 @@
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from "@testing-library/user-event";
-import { FilterProvider } from '../../contexts/filter';
+import { FilterProvider } from '../../../contexts/filter';
 import MultipleCitiesSelector from './multipleCities';
 
 const MockWrapper = ({ children }) => (

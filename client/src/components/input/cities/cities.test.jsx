@@ -1,6 +1,6 @@
 import { render, screen, waitFor } from '@testing-library/react';
 import { useState } from 'react';
-import { UserContext } from '../../contexts/user';
+import { UserContext } from '../../../contexts/user';
 import Cities from './cities';
 import userEvent from "@testing-library/user-event";
 

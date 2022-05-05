@@ -1,6 +1,6 @@
 @use 'sass:color';
 @import '@blueprintjs/core/lib/scss/variables';
-@import '../../App.scss';
+@import '../App.scss';
 
 $themes: ('light': ('primary': $rose1,
     'background': $almost-white,

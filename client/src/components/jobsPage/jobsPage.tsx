@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Spinner } from '@blueprintjs/core';
 
-import { useFilteredJobsContext } from '../contexts/filteredJobs';
-import { useJobsContext } from '../contexts/jobs';
+import { useFilteredJobsContext } from '../../contexts/filteredJobs';
+import { useJobsContext } from '../../contexts/jobs';
 import { getAllJobs } from '../../services/api';
 import Sidebar from './sidebar/sidebar';
 import JobListing from './jobListing/jobListing';

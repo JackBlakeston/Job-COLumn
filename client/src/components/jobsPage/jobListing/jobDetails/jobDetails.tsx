@@ -1,7 +1,7 @@
 import React from 'react';
 import { decode } from 'he';
 
-import { useUserContext } from '../../../contexts/user';
+import { useUserContext } from '../../../../contexts/user';
 import { numberFormatter } from '../../../utils';
 import Anchor from '../../../buttons/anchor';
 import Button from '../../../buttons/primaryButton';

@@ -1,5 +1,5 @@
 import React, { createContext, Dispatch, SetStateAction, useContext, useState } from 'react';
-import { filter, Children } from '../../interfaces'
+import { filter, Children } from '../interfaces'
 
 const Context = createContext<[filter, Dispatch<SetStateAction<filter>>] | null>(null);
 

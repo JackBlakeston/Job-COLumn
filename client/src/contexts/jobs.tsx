@@ -1,5 +1,5 @@
 import React, { createContext,Dispatch, SetStateAction, useContext, useState } from 'react';
-import { job, Children } from '../../interfaces'
+import { job, Children } from '../interfaces'
 
 const Context = createContext<[job[], Dispatch<SetStateAction<job[]>>] | null>(null);
 

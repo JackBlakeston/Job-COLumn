@@ -2,12 +2,12 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { MemoryRouter } from 'react-router-dom';
 
-import { ThemeProvider } from '../../contexts/theme';
-import { FilterProvider } from '../../contexts/filter';
-import { FilteredJobsProvider } from '../../contexts/filteredJobs';
-import { JobsProvider } from '../../contexts/jobs';
-import { SortProvider } from '../../contexts/sort';
-import { UserProvider } from '../../contexts/user';
+import { ThemeProvider } from '../../../contexts/theme';
+import { FilterProvider } from '../../../contexts/filter';
+import { FilteredJobsProvider } from '../../../contexts/filteredJobs';
+import { JobsProvider } from '../../../contexts/jobs';
+import { SortProvider } from '../../../contexts/sort';
+import { UserProvider } from '../../../contexts/user';
 import Sidebar from './sidebar';
 
 const MockWrapper = ({ children }) => (

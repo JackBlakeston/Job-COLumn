@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { useSortContext } from '../../contexts/sort';
+import { useSortContext } from '../../../contexts/sort';
 import Button from '../../buttons/secondaryButton';
 import Select from '../select/select';
 

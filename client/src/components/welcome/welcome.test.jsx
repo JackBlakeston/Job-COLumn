@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import { ThemeProvider } from '../contexts/theme';
-import { UserProvider } from '../contexts/user';
+import { ThemeProvider } from '../../contexts/theme';
+import { UserProvider } from '../../contexts/user';
 import Welcome from './welcome'
 import userEvent from "@testing-library/user-event";
 

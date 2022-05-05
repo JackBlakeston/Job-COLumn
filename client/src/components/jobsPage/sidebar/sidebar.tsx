@@ -2,12 +2,12 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import { Divider } from '@blueprintjs/core';
 
-import { useFilterContext } from '../../contexts/filter';
-import { useFilteredJobsContext } from '../../contexts/filteredJobs';
-import { useJobsContext } from '../../contexts/jobs';
-import { useSortContext } from '../../contexts/sort';
-import { useThemeContext } from '../../contexts/theme';
-import { useUserContext } from '../../contexts/user';
+import { useFilterContext } from '../../../contexts/filter';
+import { useFilteredJobsContext } from '../../../contexts/filteredJobs';
+import { useJobsContext } from '../../../contexts/jobs';
+import { useSortContext } from '../../../contexts/sort';
+import { useThemeContext } from '../../../contexts/theme';
+import { useUserContext } from '../../../contexts/user';
 import {
   footer,
   headerAndLogo
@@ -23,7 +23,7 @@ import {
   userDetails
 } from './utils';
 
-import css from '../../contexts/themes.scss';
+import css from '../../../contexts/themes.scss';
 import './sidebar.scss';
 
 const largeScreen = window.innerWidth >= Number(css.mobile?.split('p')[0]);

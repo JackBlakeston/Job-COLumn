@@ -1,5 +1,5 @@
 import React, { createContext,Dispatch, SetStateAction, useContext, useState } from 'react';
-import {user, Children} from '../../interfaces';
+import {user, Children} from '../interfaces';
 
 export const UserContext = createContext<[user, Dispatch<SetStateAction<user>>] | null>(null);
 

@@ -1,5 +1,5 @@
 import React, { createContext,Dispatch, SetStateAction, useContext, useState } from 'react';
-import { Children } from '../../interfaces';
+import { Children } from '../interfaces';
 
 const Context = createContext<[boolean, Dispatch<SetStateAction<boolean>>] | null>(null);
 

@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react"
-import { UserProvider } from "../../../contexts/user";
+import { UserProvider } from "../../../../contexts/user";
 import JobDetails from "./jobDetails";
 
 const job =  {

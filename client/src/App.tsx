@@ -8,12 +8,12 @@ import { FocusStyleManager } from '@blueprintjs/core';
 import JobsPage from './components/jobsPage/jobsPage';
 import ErrorPage from './components/errorPage/errorPage';
 import Welcome from './components/welcome/welcome';
-import { ThemeProvider } from './components/contexts/theme';
-import { UserProvider } from './components/contexts/user';
-import { JobsProvider } from './components/contexts/jobs';
-import { FilterProvider } from './components/contexts/filter';
-import { FilteredJobsProvider } from './components/contexts/filteredJobs';
-import { SortProvider } from './components/contexts/sort';
+import { ThemeProvider } from './contexts/theme';
+import { UserProvider } from './contexts/user';
+import { JobsProvider } from './contexts/jobs';
+import { FilterProvider } from './contexts/filter';
+import { FilteredJobsProvider } from './contexts/filteredJobs';
+import { SortProvider } from './contexts/sort';
 
 import 'normalize.css/normalize.css';
 import '@blueprintjs/core/lib/css/blueprint.css';
