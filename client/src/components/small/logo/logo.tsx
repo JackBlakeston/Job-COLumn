@@ -1,4 +1,4 @@
-// Local imports
+import React from 'react';
 import { ReactComponent as Icon } from './logo.svg';
 
 function Logo () {
