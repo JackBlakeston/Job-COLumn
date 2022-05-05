@@ -1,7 +1,7 @@
 import { filter, job } from "../../../interfaces";
 
 export function filterJobs (jobs: job[], filters: filter): job[] {
-  const { keywords, cities, salary } = filters;
+  const { keywords, cityNames, salary } = filters;
 
   return jobs.filter(job => {
     let result = true;
@@ -18,8 +18,8 @@ export function filterJobs (jobs: job[], filters: filter): job[] {
             .includes(keyword.toLowerCase())
         ))
     }
-    if (cities.length) {
-      result &&= cities.includes(job.locationName);
+    if (cityNames.length) {
+      result &&= cityNames.includes(job.locationName);
     }
     if (salary) {
       result &&= job.minimumSalary >= salary;

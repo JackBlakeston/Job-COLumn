@@ -1,17 +1,19 @@
 import React from 'react';
-// Local importsv
+
 import { useUserContext } from '../../contexts/user';
-import CITIES from '../../helpers/cities.json';
+import CITIES_UNTYPED from '../../../assets/cities.json';
 import Button from '../../buttons/secondaryButton';
 import Select from '../select/select';
+import { city } from '../../../interfaces';
 
 function CitiesSelector (): JSX.Element {
-  // Contexts
+
   const [user, setUser] = useUserContext();
   const { location } = user;
 
-  // Select's onItemSelect
-  function onItemSelect (city: any): void { //city should not be any
+  const CITIES: city[] = CITIES_UNTYPED;
+
+  function onItemSelect (city: city): void { //city should not be any
     setUser({
       ...user,
       location: city.name

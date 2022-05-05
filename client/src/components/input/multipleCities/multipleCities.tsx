@@ -4,7 +4,7 @@ import { MultiSelect } from '@blueprintjs/select';
 
 import { useFilterContext } from '../../contexts/filter';
 import { filterer, renderer } from '../../helpers/small';
-import CITIES_UNTYPED from '../../helpers/cities.json'
+import CITIES_UNTYPED from '../../../assets/cities.json'
 import { city } from '../../../interfaces';
 
 type props = {
@@ -16,19 +16,19 @@ function MultipleCitiesSelector ({className}: props): JSX.Element {
   const MultiSelectNew = MultiSelect.ofType<any>();
 
   const [filters, setFilters] = useFilterContext();
-  const { cities } = filters;
+  const { cityNames } = filters;
 
   const CITIES: city[] = CITIES_UNTYPED;
 
   function onItemSelect (city: city) {
     let newCities: string[] = [];
-    if (cities.includes(city.name)) newCities = cities
+    if (cityNames.includes(city.name)) newCities = cityNames
       .filter(selectedCity => selectedCity !== city.name);
-    else newCities = cities.concat(city.name).sort();
+    else newCities = cityNames.concat(city.name).sort();
 
     setFilters({
       ...filters,
-      cities: newCities
+      cityNames: newCities
     })
   }
 
@@ -41,13 +41,13 @@ function MultipleCitiesSelector ({className}: props): JSX.Element {
   function onRemove (city: string): void {
     setFilters({
       ...filters,
-      cities: cities.filter(currentCity => currentCity !== city)
+      cityNames: cityNames.filter(currentCity => currentCity !== city)
     })
   }
 
   return (
     <MultiSelectNew
-      activeItem={cities}
+      activeItem={cityNames}
       fill
       itemPredicate={filterer}
       itemRenderer={renderer}
@@ -56,7 +56,7 @@ function MultipleCitiesSelector ({className}: props): JSX.Element {
       onRemove={onRemove}
       placeholder='Desired City/Cities'
       resetOnSelect
-      selectedItems={cities}
+      selectedItems={cityNames}
       tagRenderer={tagRenderer}
     />
   )

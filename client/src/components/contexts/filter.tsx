@@ -7,7 +7,7 @@ export function FilterProvider ({ children }: Children) : JSX.Element {
 
   const [filters, setFilters] = useState<filter>({
     keywords: '',
-    cities: [],
+    cityNames: [],
     salary: 0
   });
 

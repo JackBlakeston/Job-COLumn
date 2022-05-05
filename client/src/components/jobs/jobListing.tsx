@@ -4,7 +4,7 @@ import { Dialog, Icon } from '@blueprintjs/core';
 
 import { useUserContext } from '../contexts/user';
 import { numberFormatter } from '../helpers';
-import CITIES_UNTYPED from '../helpers/cities.json';
+import CITIES_UNTYPED from '../../assets/cities.json';
 import Details from './details';
 import { city, job } from '../../interfaces';
 

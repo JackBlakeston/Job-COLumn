@@ -9,7 +9,7 @@ export interface sort {
 
 export interface filter {
   keywords: string,
-  cities: string[],
+  cityNames: string[],
   salary: number
 }
 
