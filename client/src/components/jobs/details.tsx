@@ -38,6 +38,7 @@ function Details ({ job }: detailsProps) {
         <div>
           <Anchor href={jobUrl}>
             <Button
+              onClick={() => {}}
               ariaLabel='Apply'
               icon='open-application'
               text='Apply'
