@@ -2,14 +2,14 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
 import { FilterProvider } from '../../../../contexts/filter';
-import filtersDefined from './filtersDefined';
+import FilterOptions from './filterOptions';
 
 const keywordsOnChange = jest.fn();
 const numericOnChange = jest.fn();
 
 function customRender (keywords) {
   return (
-    render(filtersDefined({
+    render(FilterOptions({
       keywords,
       keywordsOnChange,
       numericOnChange,
@@ -17,7 +17,7 @@ function customRender (keywords) {
   );
 }
 
-describe('Filters defined component', () => {
+describe('Filter options component', () => {
 
   test('Should render itself and children correctly', () => {
     customRender();

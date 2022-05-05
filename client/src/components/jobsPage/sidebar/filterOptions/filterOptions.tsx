@@ -1,20 +1,20 @@
 import React from 'react';
 import { H5, Icon, InputGroup, NumericInputProps } from '@blueprintjs/core';
 
-import MultiCity from '../../../inputs/multipleCities/multipleCities';
-import Numeric from '../../../inputs/numeric/numeric';
+import MultiCitySelect from '../../../inputs/multiCitySelect/multiCitySelect';
+import SalaryInput from '../../../inputs/salaryInput/salaryInput';
 
-type filtersDefinedProps = {
+type FilterOptionsProps = {
   keywords: string,
   keywordsOnChange: React.ChangeEventHandler<HTMLInputElement>,
-  numericOnChange: NumericInputProps['onValueChange'],
+  numericOnChange: NumericInputProps['onValueChange'], // TODO change for something more generic
 }
 
-export default function filtersDefined ({
+export default function FilterOptions ({
   keywords,
   keywordsOnChange,
   numericOnChange
-}: filtersDefinedProps): JSX.Element {
+}: FilterOptionsProps): JSX.Element {
   return (
     <div>
       <H5>
@@ -37,13 +37,13 @@ export default function filtersDefined ({
         <div className='filter-label'>
           Locations
         </div>
-        <MultiCity className='filter-value' />
+        <MultiCitySelect className='filter-value' />
       </div>
       <div className='filter-details'>
         <div className='filter-label'>
           Salary
         </div>
-        <Numeric
+        <SalaryInput
           className='filter-value'
           fill={true}
           onValueChange={numericOnChange}

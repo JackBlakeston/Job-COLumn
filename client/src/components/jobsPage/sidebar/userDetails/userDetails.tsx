@@ -1,16 +1,15 @@
 import React from 'react';
 import { numberFormatter } from '../../../utils';
 
-type userDetailsProps = {
+type UserDetailsProps = {
   location: string;
   salary: number;
 }
 
-// TODO make this a real component instead of this pinnochio bullshit
-export default function userDetails ({
+export default function UserDetails ({
   location,
   salary
-}: userDetailsProps): React.ReactNode {
+}: UserDetailsProps): JSX.Element {
 
   return (
     <div>

@@ -2,14 +2,14 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
 import { SortProvider } from '../../../../contexts/sort';
-import sortDefined from './sortDefined';
+import SortOptions from './sortOptions';
 
 const filterAndSort = jest.fn();
 const sortOnClick = jest.fn();
 
 function customRender () {
   return (
-    render(sortDefined({
+    render(SortOptions({
       filterAndSort,
       sortOnClick,
       sortOrder: 'asc',

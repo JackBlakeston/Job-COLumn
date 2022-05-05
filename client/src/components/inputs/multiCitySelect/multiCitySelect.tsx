@@ -11,7 +11,7 @@ type props = {
   className?: string
 }
 
-function MultipleCitiesSelector ({className}: props): JSX.Element {
+function MultiCitySelect ({className}: props): JSX.Element {
 
   const MultiSelectNew = MultiSelect.ofType<any>();
 
@@ -62,4 +62,4 @@ function MultipleCitiesSelector ({className}: props): JSX.Element {
   )
 }
 
-export default MultipleCitiesSelector;
+export default MultiCitySelect;

@@ -1,8 +1,8 @@
 import React from 'react';
 import { FormGroup } from '@blueprintjs/core';
 
-import Cities from '../../inputs/cities/cities';
-import Numeric from '../../inputs/numeric/numeric';
+import CitySelect from '../../inputs/citySelect/citySelect';
+import SalaryInput from '../../inputs/salaryInput/salaryInput';
 import Button from '../../buttons/primaryButton';
 import ToggleDarkMode from '../../buttons/toggleDarkMode';
 
@@ -19,9 +19,9 @@ export function userForm ({
 }: userFormProps): JSX.Element {
   return (
     <FormGroup inline >
-      <Cities />
+      <CitySelect />
       <div id='user-salary'>
-        <Numeric
+        <SalaryInput
           defaultValue={defaultValue}
           fill={true}
           onValueChange={onValueChange}

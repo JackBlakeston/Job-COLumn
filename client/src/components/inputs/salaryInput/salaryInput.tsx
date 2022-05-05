@@ -1,8 +1,6 @@
 import React from 'react';
-// Package imports
 import { NumericInput } from '@blueprintjs/core';
 
-// Local imports
 import GBP from '../../utils/GBP/GBP';
 
 type props = {
@@ -13,7 +11,7 @@ type props = {
   className?: string
 }
 
-function Numeric ({
+function SalaryInput ({
   defaultValue,
   fill,
   onValueChange,
@@ -33,4 +31,4 @@ function Numeric ({
   )
 }
 
-export default Numeric;
+export default SalaryInput;

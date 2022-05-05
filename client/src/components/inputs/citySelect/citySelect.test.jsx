@@ -1,7 +1,7 @@
 import { render, screen, waitFor } from '@testing-library/react';
 import { useState } from 'react';
 import { UserContext } from '../../../contexts/user';
-import Cities from './cities';
+import CitySelect from './citySelect';
 import userEvent from "@testing-library/user-event";
 
 // We don't really need to use a different initial values, we can change the test and remove this probably
@@ -22,12 +22,12 @@ const wait = async () => new Promise((resolve) => setTimeout(resolve, 500))
 describe('Cities component', () => {
 
   test('Cities selector should render correctly', () => {
-    render(<Cities/>, { wrapper: MockWrapper });
+    render(<CitySelect/>, { wrapper: MockWrapper });
     expect(screen.getByRole('button', {name: 'Leeds'})).toBeInTheDocument();
   });
 
   test('Cities selector should update current location correctly', async () => {
-    render(<Cities/>, { wrapper: MockWrapper });
+    render(<CitySelect/>, { wrapper: MockWrapper });
 
     const citySelectorNode = await screen.findByRole('button', {name: 'Leeds'});
 

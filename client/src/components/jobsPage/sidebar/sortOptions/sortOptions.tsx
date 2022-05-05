@@ -2,12 +2,12 @@ import React from 'react';
 import { H5, Icon } from '@blueprintjs/core';
 import { BlueprintIcons_16Id } from '@blueprintjs/icons/lib/esm/generated/16px/blueprint-icons-16';
 
-import Sorts from '../../../inputs/sortSelector/sortSelector';
+import SortSelect from '../../../inputs/sortSelect/sortSelect';
 import PrimaryButton from '../../../buttons/primaryButton';
 import SecondaryButton from '../../../buttons/secondaryButton';
 import css from '../../../../contexts/themes.scss';
 
-type sortDefinedProps = {
+type SortOptionsProps = {
   sortOrder: string,
   filterAndSort: () => void;
   sortOnClick: () => void;
@@ -19,15 +19,15 @@ function getIconName (sortOrder: string): BlueprintIcons_16Id {
   else return 'sort-desc';
 }
 
-export default function sortDefined ({
+export default function SortOptions ({
   filterAndSort,
   sortOrder,
   sortOnClick
-}: sortDefinedProps): JSX.Element {
+}: SortOptionsProps): JSX.Element {
   return (
     <div className='filter-details'>
       <H5>Sort by</H5>
-      <Sorts />
+      <SortSelect />
       <SecondaryButton
         ariaLabel={`sort-button`}
         icon={

@@ -2,9 +2,9 @@ import React from 'react';
 
 import { useSortContext } from '../../../contexts/sort';
 import Button from '../../buttons/secondaryButton';
-import Select from '../select/select';
+import Select from '../genericSelect/genericSelect';
 
-function SortSelector (): JSX.Element {
+function SortSelect (): JSX.Element {
 
   const [sort, setSort] = useSortContext();
   const { category } = sort;
@@ -40,4 +40,4 @@ function SortSelector (): JSX.Element {
   )
 }
 
-export default SortSelector;
+export default SortSelect;

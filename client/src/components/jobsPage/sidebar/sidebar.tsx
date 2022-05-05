@@ -8,19 +8,19 @@ import { useJobsContext } from '../../../contexts/jobs';
 import { useSortContext } from '../../../contexts/sort';
 import { useThemeContext } from '../../../contexts/theme';
 import { useUserContext } from '../../../contexts/user';
+import Back from '../../buttons/backButton';
+import SecondaryButton from '../../buttons/secondaryButton';
+import ToggleDarkMode from '../../buttons/toggleDarkMode';
+import FilterOptions from './filterOptions/filterOptions';
+import SortOptions from './sortOptions/sortOptions';
+import UserDetails from './userDetails/userDetails';
 import {
   footer,
   headerAndLogo
 } from '../../utils';
-import Back from '../../buttons/backButton';
-import SecondaryButton from '../../buttons/secondaryButton';
-import ToggleDarkMode from '../../buttons/toggleDarkMode';
 import {
   filterJobs,
-  filtersDefined,
   sortJobs,
-  sortDefined,
-  userDetails
 } from './utils';
 
 import css from '../../../contexts/themes.scss';
@@ -96,19 +96,22 @@ function Sidebar (): JSX.Element {
       {navbarVisible && <>
         <ToggleDarkMode text={`${darkMode ? 'Light Mode' : 'Dark Mode'}`} />
         <Divider />
-        {userDetails(user)}
+        <UserDetails
+          salary={user.salary}
+          location={user.location}
+        />
         <Divider />
-        {filtersDefined({
-          keywords: filters.keywords,
-          keywordsOnChange,
-          numericOnChange
-        })}
+        <FilterOptions
+          keywords={filters.keywords}
+          keywordsOnChange={keywordsOnChange}
+          numericOnChange={numericOnChange}
+        />
         <Divider />
-        {sortDefined({
-          filterAndSort,
-          sortOrder: sort.order,
-          sortOnClick
-        })}
+        <SortOptions
+           sortOrder={sort.order}
+           filterAndSort={filterAndSort}
+           sortOnClick={sortOnClick}
+        />
         <Divider />
         <Back />
         <Divider />

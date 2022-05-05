@@ -3,17 +3,17 @@ import React from 'react';
 import { useUserContext } from '../../../contexts/user';
 import CITIES_UNTYPED from '../../../assets/cities.json';
 import Button from '../../buttons/secondaryButton';
-import Select from '../select/select';
+import Select from '../genericSelect/genericSelect';
 import { city } from '../../../interfaces';
 
-function CitiesSelector (): JSX.Element {
+function CitySelect (): JSX.Element {
 
   const [user, setUser] = useUserContext();
   const { location } = user;
 
   const CITIES: city[] = CITIES_UNTYPED;
 
-  function onItemSelect (city: city): void { //city should not be any
+  function onItemSelect (city: city): void {
     setUser({
       ...user,
       location: city.name
@@ -34,4 +34,4 @@ function CitiesSelector (): JSX.Element {
   )
 }
 
-export default CitiesSelector;
+export default CitySelect;

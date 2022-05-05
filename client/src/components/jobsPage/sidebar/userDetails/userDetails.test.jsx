@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import userDetails from './userDetails';
+import UserDetails from './userDetails';
 
 const mockUser = {
   location: 'London',
@@ -9,7 +9,7 @@ const mockUser = {
 describe('User details component', () => {
 
   test('Should render correctly and display correct values', () => {
-    render(userDetails(mockUser));
+    render(UserDetails(mockUser));
     expect(screen.getByText(/London/)).toBeInTheDocument();
     expect(screen.getByText(/20,000/)).toBeInTheDocument();
   });

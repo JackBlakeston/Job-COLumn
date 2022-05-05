@@ -1,11 +1,11 @@
 import { render, screen } from '@testing-library/react';
-import Numeric from './numeric';
+import SalaryInput from './salaryInput';
 import userEvent from "@testing-library/user-event";
 
 const onValueChange = jest.fn();
 
 function customRender(defaultValue, placeholderText) {
-  render(<Numeric
+  render(<SalaryInput
     fill={true}
     onValueChange={onValueChange}
     placeholder={placeholderText}
