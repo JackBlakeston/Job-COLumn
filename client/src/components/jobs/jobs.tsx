@@ -25,9 +25,7 @@ function Jobs (): JSX.Element {
           setFilteredJobs(result.slice(0, 200));
         }
       });
-      // TODO test this with correct dependency array
-      // eslint-disable-next-line
-  }, []);
+  }, [setJobs, setFilteredJobs]);
 
   return (
     <main>

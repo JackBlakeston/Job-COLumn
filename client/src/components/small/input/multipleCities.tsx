@@ -20,9 +20,8 @@ function MultipleCitiesSelector ({className}: props): JSX.Element {
 
   const CITIES: city[] = CITIES_UNTYPED;
 
-  function onItemSelect (city: any) { //TODO type
+  function onItemSelect (city: city) {
     let newCities: string[] = [];
-    // todo console.log city and see props
     if (cities.includes(city.name)) newCities = cities
       .filter(selectedCity => selectedCity !== city.name);
     else newCities = cities.concat(city.name).sort();

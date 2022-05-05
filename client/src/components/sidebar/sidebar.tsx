@@ -26,7 +26,6 @@ import {
 import css from '../contexts/themes.scss';
 import './sidebar.scss';
 
-// TODO Test if this is working (toggles display sidebar button)
 const largeScreen = window.innerWidth >= Number(css.mobile?.split('p')[0]);
 
 function Sidebar (): JSX.Element {

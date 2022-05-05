@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react"
 import { UserProvider } from "../contexts/user";
-import JobListing from "./JobListing";
+import JobListing from "./jobListing";
 import userEvent from '@testing-library/user-event';
 
 const job =  {
@@ -13,8 +13,6 @@ const job =  {
     jobTitle: 'Test Job Title',
     jobDescription: 'Test description'
 };
-
-
 
 describe('JobListing component', ()=>{
   test('should render all children correctly', async () => {
