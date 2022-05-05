@@ -7,7 +7,7 @@ import { FocusStyleManager } from '@blueprintjs/core';
 
 import JobsPage from './components/jobsPage/jobsPage';
 import ErrorPage from './components/errorPage/errorPage';
-import Welcome from './components/welcome/welcome';
+import Welcome from './components/welcomePage/welcomePage';
 import { ThemeProvider } from './contexts/theme';
 import { UserProvider } from './contexts/user';
 import { JobsProvider } from './contexts/jobs';

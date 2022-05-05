@@ -14,7 +14,7 @@ import {
   privacyDisclosure
 } from './utils';
 
-import './welcome.scss';
+import './welcomePage.scss';
 
 function Welcome (): JSX.Element {
 
