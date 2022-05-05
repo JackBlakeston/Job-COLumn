@@ -8,7 +8,7 @@ import Sidebar from './sidebar/sidebar';
 import JobListing from './jobListing/jobListing';
 import { job } from '../../interfaces';
 
-import './jobs.scss';
+import './jobsPage.scss';
 
 function JobsPage (): JSX.Element {
 

@@ -1,20 +1,20 @@
 import React from 'react';
 import { decode } from 'he';
 
-import { useUserContext } from '../contexts/user';
-import { numberFormatter } from '../helpers';
-import Anchor from '../buttons/anchor';
-import Button from '../buttons/primaryButton';
-import Map from './map';
-import { job } from '../../interfaces';
+import { useUserContext } from '../../../contexts/user';
+import { numberFormatter } from '../../../helpers';
+import Anchor from '../../../buttons/anchor';
+import Button from '../../../buttons/primaryButton';
+import Map from './map/map';
+import { job } from '../../../../interfaces';
 
-import './details.scss';
+import './jobDetails.scss';
 
 type detailsProps = {
   job: job;
 }
 
-function jobDetails ({ job }: detailsProps) {
+function JobDetails ({ job }: detailsProps) {
 
   const {
     date,
@@ -73,4 +73,4 @@ function jobDetails ({ job }: detailsProps) {
   );
 }
 
-export default jobDetails;
+export default JobDetails;

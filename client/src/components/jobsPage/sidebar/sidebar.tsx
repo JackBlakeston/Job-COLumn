@@ -23,7 +23,7 @@ import {
   userDetails
 } from '../../helpers/sidebar';
 
-import css from '../contexts/themes.scss';
+import css from '../../contexts/themes.scss';
 import './sidebar.scss';
 
 const largeScreen = window.innerWidth >= Number(css.mobile?.split('p')[0]);

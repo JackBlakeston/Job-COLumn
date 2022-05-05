@@ -5,8 +5,8 @@ import { Dialog, Icon } from '@blueprintjs/core';
 import { useUserContext } from '../../contexts/user';
 import { numberFormatter } from '../../helpers';
 import CITIES_UNTYPED from '../../../assets/cities.json';
-import Details from './details/details';
-import { city, job } from '../../interfaces';
+import JobDetails from './jobDetails/jobDetails';
+import { city, job } from '../../../interfaces';
 
 import './jobListing.scss';
 
@@ -46,7 +46,7 @@ function JobListing ({ job }: jobListingProps): JSX.Element {
         onClose={() => {setIsOpen(false)}}
         title={jobTitle}
       >
-        <Details job={job} />
+        <JobDetails job={job} />
       </Dialog>
       <div className='job-listing-row'>
         <div className='job-listing-title'>
