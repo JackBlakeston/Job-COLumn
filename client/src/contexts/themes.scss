@@ -1,0 +1,32 @@
+@use 'sass:color';
+@import '@blueprintjs/core/lib/scss/variables';
+@import '../App.scss';
+
+$themes: ('light': ('primary': $rose1,
+    'background': $almost-white,
+    'inverse': $almost-black,
+    'quieter-inverse': lighten($almost-black, 10%),
+    'muted-inverse': darken($almost-white, 5%),
+    'overlay': rgba($almost-white, 0.75),
+    'supplement': rgba($rose1, 0.5),
+  ),
+  'dark': ('primary': $rose5,
+    'background': $almost-black,
+    'inverse': $almost-white,
+    'quieter-inverse': darken($almost-white, 10%),
+    'muted-inverse': lighten($almost-black, 5%),
+    'overlay': rgba($almost-black, 0.75),
+    'supplement': rgba($rose5, 0.5),
+  ));
+
+@each $theme-name,
+$properties in $themes {
+  .background.#{$theme-name} {
+
+    // Define CSS variables for each property
+    @each $name,
+    $property in $properties {
+      --#{$name}: #{$property};
+    }
+  }
+}

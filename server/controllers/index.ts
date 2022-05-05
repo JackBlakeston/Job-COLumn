@@ -1,13 +1,13 @@
 'use strict';
 import express from 'express'
 import { Job } from '../interfaces';
+import Jobs from'../models/jobs';
 
 // Imports
-const Jobs = require('../models/jobs');
 
-async function getAllJobs (_: express.Request, res : express.Response ) {
+export default async function getAllJobs (_: express.Request, res : express.Response ) {
   try {
-    const allJobs : Job[] = await Jobs.getAllJobs();
+    const allJobs : Job[] = await Jobs();
     res.status(200);
     res.send(allJobs);
     return
@@ -17,5 +17,3 @@ async function getAllJobs (_: express.Request, res : express.Response ) {
     return
   }
 }
-
-module.exports = { getAllJobs };

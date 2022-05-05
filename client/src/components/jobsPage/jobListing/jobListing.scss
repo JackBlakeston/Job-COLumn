@@ -1,0 +1,39 @@
+@import '../../../App.scss';
+
+.bp4-dialog {
+  @media (max-width: $mobile) {
+    max-width: 90%;
+  }
+}
+
+.job-listing {
+  display: flex;
+  background-color: var(--muted-inverse);
+  flex-direction: column;
+  margin-bottom: 10px;
+  padding: 1rem clamp(1rem, 5%, 1rem);
+  border: 1px solid;
+  border-radius: 10px;
+  justify-content: space-between;
+}
+
+.job-listing-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.job-listing-info {
+  color: var(--quieter-inverse);
+}
+
+.job-listing-title {
+  font-size: large;
+}
+
+.job-listing-salary {
+  font-size: medium;
+  font-weight: bold;
+}

@@ -1,0 +1,27 @@
+@import '../../../../App.scss';
+
+.details {
+  font-size: large;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.details-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.job-salary {
+  font-size: large;
+  font-weight: bold;
+}
+
+@media (max-width: $mobile) {
+  .details {
+    font-size: medium;
+  }
+}

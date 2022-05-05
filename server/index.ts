@@ -1,16 +1,19 @@
 'use strict';
 // Package imports
 import express from 'express'
-const cors = require('cors');
-const morgan = require('morgan');
-require('dotenv').config();
+import cors from 'cors'
+import router from './router'
+import db from './models/index'
+import morgan from 'morgan'
+import dotend from 'dotenv'
+dotend.config();
 
 // Local imports
-const router = require('./router');
-const db = require('./models/index');
+type prop = {
+  hey: string
+}
 
-
-const app: express.Application = express();
+const app = express();
 const HOST_NAME : string | undefined = process.env.HOST_NAME;
 const PORT : string | undefined = process.env.PORT_NUMBER;
 
