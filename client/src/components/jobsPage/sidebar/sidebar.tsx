@@ -76,7 +76,6 @@ function Sidebar (): JSX.Element {
     }
   }, []);
 
-  // Job filter and sort function
   function filterAndSort () {
     setFilteredJobs(sortJobs(filterJobs(jobs, filters), sort));
   }
